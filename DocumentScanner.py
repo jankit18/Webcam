@@ -18,15 +18,15 @@ while ret:
         cv2.imshow("Scanned photo",frame)
         print("press u if its unreadable")
         print("press b to convert it to black and white form")
-        k=cv2.waitKey(0)
-        if  k== ord('u'):
+        k1=cv2.waitKey(0)
+        if  k1== ord('u'):
             cv2.destroyWindow('Scanned photo')
             gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
             new=cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,155,1)
             cv2.imwrite("E://pdf//scanned%d.jpg"%i,new)
             i = i+1
             continue
-        elif k==ord('b'):
+        elif k1==ord('b'):
             cv2.destroyWindow('Scanned photo')
             gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY) 
             cv2.imwrite("E://pdf///scanned%d.jpg"%i,gray)
