@@ -10,6 +10,7 @@ while ret:
     ret, frame=cap.read()
     if f1==0:
         print("press 's' to scan the document")
+        print("press 'q' to quit")
         f1=f1+1
     cv2.imshow("camera feed",frame)
     k= cv2.waitKey(1) #waits for input from the keyboard
