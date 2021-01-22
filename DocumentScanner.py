@@ -39,7 +39,7 @@ while ret:
             print("press 'q' to quit")
             continue
     
-    if k==ord('q'):
+    elif k==ord('q'):
         ret= False
         break
             
