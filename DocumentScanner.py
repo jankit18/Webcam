@@ -12,6 +12,7 @@ while ret:
         print("press 's' to scan the document")
         print("press 'q' to quit")
         f1=f1+1
+        
     cv2.imshow("camera feed",frame)
     k= cv2.waitKey(1) #waits for input from the keyboard
     if k==ord('s'):
@@ -26,13 +27,18 @@ while ret:
             new=cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,155,1)
             cv2.imwrite("E://pdf//scanned%d.jpg"%i,new)
             i = i+1
+            print("press 's' to scan more document")
+            print("press 'q' to quit")
             continue
         elif k1==ord('b'):
             cv2.destroyWindow('Scanned photo')
             gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY) 
             cv2.imwrite("E://pdf///scanned%d.jpg"%i,gray)
             i = i+1
+            print("press 's' to scan more document")
+            print("press 'q' to quit")
             continue
+    
     if k==ord('q'):
         ret= False
         break
