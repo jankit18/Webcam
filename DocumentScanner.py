@@ -44,7 +44,7 @@ while ret:
         break
             
 cv2.destroyAllWindows()
-imagelist = os.listdir("E://pdf")
+imagelist = [f for f in os.listdir('E://pdf') if os.path.isfile(f)]
 pdf = FPDF()
 for image in imagelist:
     image = "E://pdf//"+image
